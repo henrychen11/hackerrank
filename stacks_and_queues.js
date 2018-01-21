@@ -28,3 +28,37 @@ class Stack {
 }
 
 //this is the linked list implementation
+import linkedList from './linked_list.js';
+
+class StackLinkedList {
+  constructor(){
+    this.list = new linkedList;
+  }
+
+  push(item){
+    this.list.addFirst(item);
+  }
+
+  pop(){
+    if (this.list.length === 0){
+      return 'Empty List';
+    }
+
+    let val = this.list.head.data;
+    this.list.removeFirst();
+    //return the val to confirm success removal
+    return val;
+  }
+
+  peek(){
+    if (!this.list.head){
+      return;
+    }
+    //return head if there is a head
+    return this.list.head.data;
+  }
+
+  getLength(){
+    return this.list.length;
+  }
+}
