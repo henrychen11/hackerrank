@@ -26,3 +26,5 @@ class Stack {
     return this.items.slice(-1)[0];
   }
 }
+
+//this is the linked list implementation
