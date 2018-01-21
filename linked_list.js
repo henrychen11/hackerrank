@@ -70,8 +70,17 @@ class linkedList {
       if(this.count === 1){
         this.head = null;
         this.tail = null;
+      } else {
+        //find the node right before the last node
+        let current = this.head;
+        while (current.next !== this.tail){
+          current = current.next;
+        }
+        //after finding the "last" current
+        current.next = null;
+        this.tail = current;
       }
-    } else
+      //decrease the count by 1
+      this.count -= 1;
   }
-
 }
