@@ -3,7 +3,7 @@ let b = "bbbbb"; // "b"
 let c = "pwwkew"; // "wke"
 
 var lengthOfLongestSubstring = function(s) {
-  console.log("input", s);
+  //console.log("input", s);
   let max = 0;
   let start = 0;
   let hash = {};
@@ -17,7 +17,7 @@ var lengthOfLongestSubstring = function(s) {
     hash[current] = i;
     max = Math.max(max, i - start + 1);
   }
-  console.log(hash);
+  //console.log(hash);
   return max;
 };
 
