@@ -23,7 +23,7 @@ class Node {
 
   contains(value){
     let current = this.root;
-    
+
     while(current){
       if (this.data === current.data){
         return true;
@@ -35,6 +35,16 @@ class Node {
       }
     }
     return false;
+  }
+
+  printInOrder(){
+    if (this.left !== null){
+      this.left.printInOrder();
+    }
+    console.log(this.data);
+    if (this.right !== null){
+      this.right.printInOrder();
+    }
   }
 
 }
