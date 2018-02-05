@@ -1,15 +1,21 @@
-var checkPossibility = function(nums) {
-    let counter = 0;
-    for (let i=1; i<nums.length; i++){
-        if (nums[i] > nums[i+1]){
-            counter += 1;
-            if (counter > 1){
-                return false;
-            }
-        }
-    }
+let checkPossibility = (nums) => {
+  let counter = 0;
+  for (let index = 1; index < nums.length; index++) {
 
-    return true;
+    if (nums[index] < nums[index - 1]) {
+      counter += 1;
+      if (counter > 1) {
+        return false;
+      }
+
+      if (index > 1
+      && nums[index - 1] > nums[index + 1]
+      && nums[index] < nums[index - 2]) {
+        return false;
+      }
+    }
+  }
+  return true;
 };
 
 let test1 = [3,4,2,3];
