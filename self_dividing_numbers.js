@@ -1,21 +1,21 @@
 var selfDividingNumbers = function(left, right) {
-    let r = [];
+    let result = [];
     for(let i = left;i <= right; i++){
         if (isDividing(i)){
-            r.push(i);
+            result.push(i);
         }
     }
-    return r;
+    return result;
 };
 
 function isDividing(num){
-    num2 = num;
+    let num2 = num;
     while(num2 > 0){
-        remainder = num2 % 10;
-        if (remainder == 0){
+        let remainder = num2 % 10;
+        if (remainder === 0){
             return false;
         }
-        if ((num % remainder) != 0){
+        if ((num % remainder) !== 0){
             return false;
         }
         num2 = Math.floor(num2/10);
@@ -23,7 +23,7 @@ function isDividing(num){
     return true;
 }
 
-let left = 123;
-let right = -123;
+let l = 1;
+let r = 22;
 
-console.log("test", selfDividingNumbers(left, right));
+console.log("test", selfDividingNumbers(l, r));
