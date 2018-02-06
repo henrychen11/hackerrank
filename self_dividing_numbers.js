@@ -1,18 +1,27 @@
-var selfDividingNumbers = function(l, r) {
-    let results = [];
-
-    for (let i=left; i <= right; i++) {
-        console.log(i)
-        while (i !== 0){
-            let divisor = i % 10
-            if (i % divisor !== 0) return false;
-            results.push(i);
-            i = Math.floor(i % 10)
+var selfDividingNumbers = function(left, right) {
+    let r = [];
+    for(let i = left;i <= right; i++){
+        if (isDividing(i)){
+            r.push(i);
         }
     }
-
-    return result;
+    return r;
 };
+
+function isDividing(num){
+    num2 = num;
+    while(num2 > 0){
+        remainder = num2 % 10;
+        if (remainder == 0){
+            return false;
+        }
+        if ((num % remainder) != 0){
+            return false;
+        }
+        num2 = Math.floor(num2/10);
+    }
+    return true;
+}
 
 let left = 123;
 let right = -123;
