@@ -28,3 +28,10 @@ function partition(arr, pivot, left, right){
   swap(arr, right, partitionIndex);
   return partitionIndex;
 }
+
+
+function swap(arr, i, j){
+   var temp = arr[i];
+   arr[i] = arr[j];
+   arr[j] = temp;
+}
