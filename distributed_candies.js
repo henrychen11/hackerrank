@@ -21,3 +21,10 @@ var distributeCandies = function(candies) {
     }
 
 };
+
+let test = [1,1,1,1,1,1,2,3];
+console.log("length", test.length);
+//half = 4
+//size = 3
+
+console.log(distributeCandies(test));
