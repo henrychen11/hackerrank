@@ -25,3 +25,8 @@ function rotate1(number) {
 console.log(a, rotate1(a));
 console.log(b, rotate1(b));
 console.log(c, rotate1(c));
+
+function rotate2(number) {
+    if ( ![1,6,8,9,0].includes(parseInt(number[i]))) return false;
+    
+}
