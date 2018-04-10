@@ -112,3 +112,5 @@ def symmetrical(string)
   puts(symmetrical("abcdedcba") == true)
   
   puts(symmetrical("henry") == false)
+
+  #non technical questions
