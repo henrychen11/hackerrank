@@ -1,10 +1,9 @@
 AA Practice PDF: https://www.appacademy.io/assets/App_Academy_Prepwork_Studyguide.pdf
 
-// Caesar Cipher
-
-// Ping Pong 
-// Given an array, print out the 1st-3rd-5th... elements
-// Extract / pop out the element, until the array is empty
+# Caesar Cipher
+# Ping Pong 
+# Given an array, print out the 1st-3rd-5th... elements
+# Extract / pop out the element, until the array is empty
 
 # Back in the good old days, you used to be able to write a darn near
 # uncrackable code by simply taking each letter of a message and incrementing it
